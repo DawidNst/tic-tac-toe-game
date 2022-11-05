@@ -25,106 +25,106 @@ public class Mechanics extends Board{
 
     public boolean checkIfWinRows(List<Character> board, Gamer gamer, int boardSize) {
         ifWin = false;
-        int j=0;
+        int row=0;
         int counter;
-        while ((j <= board.size()-1) && (!ifWin)) {
-            int i=j;
-            while ((i <= (boardSize + j - winningNumber)) && (!ifWin)) {
-                if (board.get(i) == gamer.getGamerSymbol()) {
-                    int ii = i;
+        while ((row <= board.size()-1) && (!ifWin)) {
+            int square=row;
+            while ((square <= (boardSize + row - winningNumber)) && (!ifWin)) {
+                if (board.get(square) == gamer.getGamerSymbol()) {
+                    int symbol = square;
                     ifWin = true;
                     counter = 1;
                     while (counter<=winningNumber) {
-                        if (board.get(ii) != gamer.getGamerSymbol()) {
+                        if (board.get(symbol) != gamer.getGamerSymbol()) {
                             ifWin = false;
                             break;
                         }
-                        ii++;
+                        symbol++;
                         counter++;
                     }
                 }
-                i++;
+                square++;
             }
-            j += boardSize;
+            row += boardSize;
         }
         return ifWin ;
     }
     public boolean checkIfWinColumns(List<Character> board, Gamer gamer, int boardSize) {
         ifWin = false;
-        int j=0;
+        int row=0;
         int counter;
-        while ((j <= (board.size() - (boardSize * winningNumber))) && (!ifWin)) {
-            int i=j;
-            while ((i < (boardSize + j)) && (!ifWin)) {
-                if (board.get(i) == gamer.getGamerSymbol()) {
-                    int ii = i;
+        while ((row <= (board.size() - (boardSize * winningNumber))) && (!ifWin)) {
+            int square=row;
+            while ((square < (boardSize + row)) && (!ifWin)) {
+                if (board.get(square) == gamer.getGamerSymbol()) {
+                    int column = square;
                     ifWin = true;
                     counter = 1;
                     while (counter<=winningNumber) {
-                        if (board.get(ii) != gamer.getGamerSymbol()) {
+                        if (board.get(column) != gamer.getGamerSymbol()) {
                             ifWin = false;
                             break;
                         }
-                        ii += boardSize;
+                        column += boardSize;
                         counter++;
                     }
 
                 }
-                i++;
+                square++;
             }
-            j += boardSize;
+            row += boardSize;
         }
         return ifWin ;
     }
     public boolean checkIfWinDiagonallyPositive(List<Character> board, Gamer gamer, int boardSize){
         ifWin = false;
-        int j=0;
+        int row=0;
         int counter;
-        while ((j <= board.size()- (boardSize * winningNumber)) && (!ifWin)) {
-            int i=j;
-            while ((i <= (boardSize + j - winningNumber)) && (!ifWin)) {
-                if (board.get(i) == gamer.getGamerSymbol()) {
-                    int ii = i;
+        while ((row <= board.size()- (boardSize * winningNumber)) && (!ifWin)) {
+            int square=row;
+            while ((square <= (boardSize + row - winningNumber)) && (!ifWin)) {
+                if (board.get(square) == gamer.getGamerSymbol()) {
+                    int column = square;
                     ifWin = true;
-                    counter = 1;
+                    counter = square;
                     while (counter<=winningNumber) {
-                        if (board.get(ii) != gamer.getGamerSymbol()) {
+                        if (board.get(column) != gamer.getGamerSymbol()) {
                             ifWin = false;
                             break;
                         }
-                        ii +=boardSize + 1 ;
+                        column +=boardSize + 1 ;
                         counter++;
                     }
                 }
-                i++;
+                square++;
             }
-            j += boardSize;
+            row += boardSize;
         }
         return ifWin ;
     }
     public boolean checkIfWinDiagonallyNegative(List<Character> board, Gamer gamer, int boardSize){
         ifWin = false;
-        int j=0;
+        int row=0;
         int counter=0;
-        while ((j <= (board.size()) - (boardSize * winningNumber)) && (!ifWin)) {
-            int i=j+winningNumber-1;
-            while ((i <= (boardSize + j-1)) && (!ifWin)) {
-                if (board.get(i) == gamer.getGamerSymbol()) {
-                    int ii = i+boardSize-1;
+        while ((row <= (board.size()) - (boardSize * winningNumber)) && (!ifWin)) {
+            int square=row+winningNumber-1;
+            while ((square <= (boardSize + row-1)) && (!ifWin)) {
+                if (board.get(square) == gamer.getGamerSymbol()) {
+                    int column = square+boardSize-1;
                     ifWin = true;
                     counter = 2;
                     while (counter<=winningNumber) {
-                        if (board.get(ii) != gamer.getGamerSymbol()) {
+                        if (board.get(column) != gamer.getGamerSymbol()) {
                             ifWin = false;
                             break;
                         }
-                        ii +=boardSize - 1 ;
+                        column +=boardSize - 1 ;
                         counter++;
                     }
                 }
-                i++;
+                square++;
             }
-            j += boardSize;
+            row += boardSize;
         }
         return ifWin ;
     }
@@ -146,8 +146,8 @@ public class Mechanics extends Board{
             board.set(square, gamer.getGamerSymbol());
             squareEmpty = true;
             for (int i=0; i<=emptySquares.size();i++){
-                if(emptySquares.get(i) == square){
-                    emptySquares.remove(i);
+                if(emptySquares.get(square) == square){
+                    emptySquares.remove(square);
                     break;
                 }
             }
@@ -166,27 +166,25 @@ public class Mechanics extends Board{
         }
     }
 
-    public void setPlayers(){
-        Entry entry = new Entry();
-        String name;
-        boolean isHuman;
+    public void setPlayers() {
 
-        playersList.add(new Gamer("Player#1",true,'O'));
-        playersList.add(new Gamer("Player#2",true,'X'));
+        playersList.add(new Gamer("Player#1", false, 'O'));
+        playersList.add(new Gamer("Player#2", false, 'X'));
 
-
-        System.out.println("Enter name #1: ");
-        name = entry.getStringEntry();
-        System.out.println("Is player#1 human? [y]-yes, [n]-no:");
-        isHuman = entry.selectYesOrNot();
-        playersList.set(0,new Gamer(name,isHuman,'O'));
-
-        System.out.println("Enter name #2: ");
-        name = entry.getStringEntry();
-        System.out.println("Is player#2 human? [y]-yes, [n]-no:");
-        isHuman = entry.selectYesOrNot();
-        playersList.set(1,new Gamer(name,isHuman,'X'));
+        initPlayer(1,'0');
+        initPlayer(2,'X');
     }
+        private void initPlayer( int playerNumber, char playerSymbol){
+            String name;
+            boolean isHuman;
+            Entry entry = new Entry();
+            System.out.println("Enter name #" + playerNumber + " : " );
+            name = entry.getStringEntry();
+            System.out.println("Is player#" + playerSymbol + " human? [y]-yes, [n]-no:");
+            isHuman = entry.selectYesOrNot();
+            playersList.set(1,new Gamer(name,isHuman,playerSymbol));
+        }
+
     public void setWinningNumber(int boardSize){
         Entry entry = new Entry();
         boolean numberValidation=false;

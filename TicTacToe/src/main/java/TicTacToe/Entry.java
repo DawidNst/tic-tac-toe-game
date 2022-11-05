@@ -76,30 +76,37 @@ public class Entry {
         while(!isNumber) {
             Scanner enteredValue = new Scanner(System.in);
             Scanner numbersSelected = new Scanner(enteredValue.nextLine()).useDelimiter("\\s*-\\s*");
-            if (numbersSelected.hasNextInt()) {
-                row = numbersSelected.nextInt();
-                if (numbersSelected.hasNextInt())  {
-                    column = numbersSelected.nextInt();
-                    if ((row > 0) && (row <= boardSize)) {
-                        if ((column > 0) && (column <= boardSize)) {
-                            listWithSelection.add(row);
-                            listWithSelection.add(column);
-                            isNumber = true;
-                        } else {
-                            System.out.println("Entered numbers must be grater then 0 and smaller then " + (boardSize + 1) + ":");
-                        }
-                    }
-                }else{
-                    System.out.println("You must enter number for rows and columns!");
-                }
-            }else {
-                System.out.println("""
-                You must select square. For example [12-23]. First number is for rows, second for columns"+
-                "Entered numbers must be grater then 0 and smaller then """ + (boardSize + 1) + ":");
-            }
+            isNumber = isaBoolean(boardSize, listWithSelection, isNumber, numbersSelected);
             enteredValue.reset();
             numbersSelected.reset();
         }
         return listWithSelection;
+    }
+
+    private boolean isaBoolean(int boardSize, List<Integer> listWithSelection, boolean isNumber, Scanner numbersSelected) {
+        int column;
+        int row;
+        if (numbersSelected.hasNextInt()) {
+            row = numbersSelected.nextInt();
+            if (numbersSelected.hasNextInt())  {
+                column = numbersSelected.nextInt();
+                if ((row > 0) && (row <= boardSize)) {
+                    if ((column > 0) && (column <= boardSize)) {
+                        listWithSelection.add(row);
+                        listWithSelection.add(column);
+                        isNumber = true;
+                    } else {
+                        System.out.println("Entered numbers must be grater then 0 and smaller then " + (boardSize + 1) + ":");
+                    }
+                }
+            }else{
+                System.out.println("You must enter number for rows and columns!");
+            }
+        }else {
+            System.out.println("""
+            You must select square. For example [12-23]. First number is for rows, second for columns"+
+            "Entered numbers must be grater then 0 and smaller then """ + (boardSize + 1) + ":");
+        }
+        return isNumber;
     }
 }
