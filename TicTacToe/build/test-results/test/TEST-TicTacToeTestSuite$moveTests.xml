@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Move logic" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-05T13:09:40" hostname="DESKTOP-B0AICNP" time="0.013">
+  <properties/>
+  <testcase name="computerMoveTestTie()" classname="TicTacToeTestSuite$moveTests" time="0.002"/>
+  <testcase name="playerMoveTestInvalid()" classname="TicTacToeTestSuite$moveTests" time="0.003"/>
+  <testcase name="computerMoveTestValid()" classname="TicTacToeTestSuite$moveTests" time="0.003"/>
+  <testcase name="playerMoveTestValid()" classname="TicTacToeTestSuite$moveTests" time="0.002"/>
+  <system-out><![CDATA[Preparing test #: 9
+Test#: 9 executed.
+Preparing test #: 10
+Selected square is ready.Select another square:
+Test#: 10 executed.
+Preparing test #: 11
+Test#: 11 executed.
+Preparing test #: 12
+Test#: 12 executed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Win logic" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-11-05T13:09:40" hostname="DESKTOP-B0AICNP" time="0.061">
+  <properties/>
+  <testcase name="checkIfWinRowTestNoWin()" classname="TicTacToeTestSuite$winTest" time="0.033"/>
+  <testcase name="checkIfWinPositiveDiagonallyTestNoWin()" classname="TicTacToeTestSuite$winTest" time="0.003"/>
+  <testcase name="checkIfWinColumnTestWin()" classname="TicTacToeTestSuite$winTest" time="0.003"/>
+  <testcase name="checkIfWinNegativeDiagonallyTestWin()" classname="TicTacToeTestSuite$winTest" time="0.002"/>
+  <testcase name="checkIfWinRowTestWin()" classname="TicTacToeTestSuite$winTest" time="0.002"/>
+  <testcase name="checkIfWinNegativeDiagonallyTestNoWin()" classname="TicTacToeTestSuite$winTest" time="0.003"/>
+  <testcase name="checkIfWinColumnTestNoWin()" classname="TicTacToeTestSuite$winTest" time="0.004"/>
+  <testcase name="checkIfWinPositiveDiagonallyTestWin()" classname="TicTacToeTestSuite$winTest" time="0.003"/>
+  <system-out><![CDATA[Preparing test #: 1
+Test#: 1 executed.
+Preparing test #: 2
+Test#: 2 executed.
+Preparing test #: 3
+Test#: 3 executed.
+Preparing test #: 4
+Test#: 4 executed.
+Preparing test #: 5
+Test#: 5 executed.
+Preparing test #: 6
+Test#: 6 executed.
+Preparing test #: 7
+Test#: 7 executed.
+Preparing test #: 8
+Test#: 8 executed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

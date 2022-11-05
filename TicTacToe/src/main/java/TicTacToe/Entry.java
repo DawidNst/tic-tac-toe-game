@@ -76,14 +76,14 @@ public class Entry {
         while(!isNumber) {
             Scanner enteredValue = new Scanner(System.in);
             Scanner numbersSelected = new Scanner(enteredValue.nextLine()).useDelimiter("\\s*-\\s*");
-            isNumber = isaBoolean(boardSize, listWithSelection, isNumber, numbersSelected);
+            isNumber = numberSelected(boardSize, listWithSelection, isNumber, numbersSelected);
             enteredValue.reset();
             numbersSelected.reset();
         }
         return listWithSelection;
     }
 
-    private boolean isaBoolean(int boardSize, List<Integer> listWithSelection, boolean isNumber, Scanner numbersSelected) {
+    private boolean numberSelected(int boardSize, List<Integer> listWithSelection, boolean isNumber, Scanner numbersSelected) {
         int column;
         int row;
         if (numbersSelected.hasNextInt()) {
@@ -104,7 +104,7 @@ public class Entry {
             }
         }else {
             System.out.println("""
-            You must select square. For example [12-23]. First number is for rows, second for columns"+
+            You must select square. For example [6-16]. First number is for rows, second for columns"+
             "Entered numbers must be grater then 0 and smaller then """ + (boardSize + 1) + ":");
         }
         return isNumber;
