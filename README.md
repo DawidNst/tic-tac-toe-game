@@ -1,4 +1,4 @@
-# tic-tac-toe-game
+\n Tic-Tac-Toe-Game
 Welcome to my project, 
 I am a beginner programmer 
 and I am constantly trying to 
