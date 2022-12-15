@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="812b82b9-0ede-424c-b53c-87789c27591a" name="Changes" comment="tictactoe">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TicTacToe/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToe/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TicTacToe/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToe/Entry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TicTacToe/Mechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToe/Mechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TicTacToeTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TicTacToeTestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +201,7 @@
       <workItem from="1665489781693" duration="2138000" />
       <workItem from="1667299070376" duration="9783000" />
       <workItem from="1667581454132" duration="753000" />
-      <workItem from="1667646092090" duration="4999000" />
+      <workItem from="1667646092090" duration="7356000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1664212147604</created>
@@ -238,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667581535168</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tictactoe">
+      <created>1667651200829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667651200829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tictactoe">
+      <created>1667653842148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667653842148</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

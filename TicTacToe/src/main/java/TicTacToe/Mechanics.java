@@ -86,8 +86,8 @@ public class Mechanics extends Board{
                 if (board.get(square) == gamer.getGamerSymbol()) {
                     int column = square;
                     ifWin = true;
-                    counter = square;
-                    while (counter<=winningNumber) {
+                    counter=1;
+                while (counter<=winningNumber) {
                         if (board.get(column) != gamer.getGamerSymbol()) {
                             ifWin = false;
                             break;
